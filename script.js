@@ -73,13 +73,19 @@ document.querySelectorAll(".btn-navigate-form-step").forEach((formNavigationBtn)
 });
 
 
-new SlimSelect({
+var q1 = new SlimSelect({
     select: '#q1',
     closeOnSelect: false,
     hideSelectedOption: true,
     limit: 2,
     placeholder: 'Choose a maximum of 2 options',
+    onChange: () => {
+        if (q1.selected().length >= 2 ){
+            q1.close();
+        }
+    }
 });
+
 
 new SlimSelect({
     select: '#q2',
@@ -89,18 +95,28 @@ new SlimSelect({
     select: '#q3',
 });
 
-new SlimSelect({
+var q4 = new SlimSelect({
     select: '#q4',
     closeOnSelect: false,
     hideSelectedOption: true,
     limit: 2,
     placeholder: 'Choose a maximum of 2 options',
+    onChange: () => {
+        if (q4.selected().length >= 2 ){
+            q4.close();
+        }
+    }
     
 });
-new SlimSelect({
+var q5 = new SlimSelect({
     select: '#q5',
     closeOnSelect: false,
     hideSelectedOption: true,
     limit: 3,
     placeholder: 'Choose a maximum of 3 options',
+    onChange: () => {
+        if (q5.selected().length >= 3 ){
+            q5.close();
+        }
+    }
 });
