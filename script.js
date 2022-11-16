@@ -75,28 +75,32 @@ document.querySelectorAll(".btn-navigate-form-step").forEach((formNavigationBtn)
 
 new SlimSelect({
     select: '#q1',
-    select: '#q2',
-
+    closeOnSelect: false,
+    hideSelectedOption: true,
+    limit: 2,
+    placeholder: 'Choose a maximum of 2 options',
 });
+
+new SlimSelect({
+    select: '#q2',
+});
+
 new SlimSelect({
     select: '#q3',
 });
-new SlimSelect({
-    select: '#q4',
-});
-new SlimSelect({
-    select: '#q5',
-});
-slim = new SlimSelect({
-    select: '.multiple',
-    limit: 2
-})
-new SlimSelect({
-    select: '#q4',
-    limit: 3
-})
-new SlimSelect({
-    select: '#q5',
-    limit: 3
-})
 
+new SlimSelect({
+    select: '#q4',
+    closeOnSelect: false,
+    hideSelectedOption: true,
+    limit: 2,
+    placeholder: 'Choose a maximum of 2 options',
+    
+});
+new SlimSelect({
+    select: '#q5',
+    closeOnSelect: false,
+    hideSelectedOption: true,
+    limit: 3,
+    placeholder: 'Choose a maximum of 3 options',
+});
