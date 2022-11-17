@@ -20,7 +20,8 @@
     /**
      * Show the current form step (as passed to the function).
      */
-    document.querySelector("#step-" + stepNumber).classList.remove("d-none");
+    document.querySelector("#step-" + stepNumber).classList.add("fade")
+    document.querySelector("#step-" + stepNumber).classList.remove("d-none")
     /**
      * Select the form step circle (progress bar).
      */
