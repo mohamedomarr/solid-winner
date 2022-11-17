@@ -1,4 +1,11 @@
+document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+            document.querySelector("#step-1").querySelector(".btn_next").click()
 
+        }
+    });
+});
 /**
  * Define a function to navigate betweens form steps.
  * It accepts one parameter. That is - step number.
@@ -9,6 +16,7 @@
      */
     document.querySelectorAll(".form-step").forEach((formStepElement) => {
         formStepElement.classList.add("d-none");
+    
     });
     /**
      * Mark all form steps as unfinished.
@@ -22,6 +30,13 @@
      */
     document.querySelector("#ding-step-" + stepNumber).classList.add("fade")
     document.querySelector("#step-" + stepNumber).classList.remove("d-none")
+    document.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+            document.querySelector("#step-" + stepNumber).querySelector(".btn_next").click()
+
+        }
+    });
+
     /**
      * Select the form step circle (progress bar).
      */
@@ -61,6 +76,18 @@ document.querySelectorAll(".btn-navigate-form-step").forEach((formNavigationBtn)
     /**
      * Add a click event listener to the button.
      */
+     formNavigationBtn.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+        /**
+         * Get the value of the step.
+         */
+        const stepNumber = parseInt(formNavigationBtn.getAttribute("step_number"));
+        /**
+         * Call the function to navigate to the target form step.
+         */
+        navigateToFormStep(stepNumber);
+        }
+    });
     formNavigationBtn.addEventListener("click", () => {
         /**
          * Get the value of the step.
