@@ -30,6 +30,7 @@
      * Mark the current form step as active.
      */
     formStepCircle.classList.remove("form-stepper-unfinished", "form-stepper-completed");
+    formStepCircle.classList.add("fade");
     formStepCircle.classList.add("form-stepper-active");
     /**
      * Loop through each form step circles.
