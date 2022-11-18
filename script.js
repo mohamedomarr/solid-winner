@@ -233,7 +233,7 @@ function callingAirtable(answers) {
                 <td>${records[i].get("Name")}</td>
                 ${
                   records[i].get("Description")
-                    ? `<td class="des">${records[i].get("Description")}"></td>`
+                    ? `<td class="des">${records[i].get("Description")}</td>`
                     : "<td class='des'></td>"
                 }
                 <td><a href="${records[i].get("Website")}">Learn more</a></td>

@@ -344,3 +344,6 @@ ul.form-stepper li a .form-stepper-circle {
     padding: 1rem;
 }
 }
+td {
+  vertical-align: middle !important;
+}
