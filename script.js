@@ -1,8 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("welcome-btn").addEventListener("click", () => {
+    document.getElementById("welcome").style.display = "none";
+    document.getElementById("myform").style.display = "block";
+  });
   document.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
-      document.querySelector("#step-1").querySelector(".btn_next").click()
+      if (document.getElementById("myform").style.display == "none") {
+        document.getElementById("welcome").style.display = "none";
+        document.getElementById("myform").style.display = "block";
+      }else{
 
+        document.querySelector("#step-1").querySelector(".btn_next").click()
+      }
     }
   });
 });
@@ -204,24 +213,30 @@ function callingAirtable(answers) {
           document.getElementById("answers").style.display = "none";
         } else {
           var i = 0;
-          document.getElementById("result").innerHTML = "Answers";
+          document.getElementById("result").innerHTML = "Our Recommendations";
           document.getElementById("result").style.display = "block";
           document.getElementById("answers").style.display = "block";
           document.getElementById("theTable").innerHTML = "";
           for (i = 0; i < records.length; i++) {
             console.log("Answer number ", i);
             console.log("Resource:", records[i].get("Name"));
+            console.log("Resource:", records[i].get("Description"));
             console.log("Website:", records[i].get("Website"));
             $("#theTable").append(
               `<tr>
                 <th scope="row">${i + 1}</th>
                 ${
                   records[i].get("Logo")
-                    ? `<td><img class="img-fluid img-thumbnail" style="max-width:200px;" src="${records[i].get("Logo")[0].url}"></td>`
+                    ? `<td><img class="img-fluid img-thumbnail"  src="${records[i].get("Logo")[0].url}"></td>`
                     : "<td></td>"
                 }
                 <td>${records[i].get("Name")}</td>
-                <td><a href="${records[i].get("Website")}">Website Link</a></td>
+                ${
+                  records[i].get("Description")
+                    ? `<td class="des">${records[i].get("Description")}"></td>`
+                    : "<td class='des'></td>"
+                }
+                <td><a href="${records[i].get("Website")}">Learn more</a></td>
                 </tr>`
             );
           }

@@ -1,3 +1,4 @@
+
 :root{
 	--primary: #4361ee;
 	--secondary: #bfc0c0;
@@ -14,7 +15,10 @@ h1 {
 h2 {
   margin: 0;
 }
-#multi-step-form-container {
+#myform {
+  margin-top: 5rem;
+}
+#welcome {
   margin-top: 5rem;
 }
 .text-center {
@@ -181,12 +185,26 @@ ul.form-stepper li a .form-stepper-circle {
   justify-content: flex-end;
 }
 
-.btns_wrap .common_btns button {
+.btns_wrap .common_btns .btn-navigate-form-step {
   border: 0;
   padding: 12px 15px;
   background: var(--primary);
   color: var(--white);
   width: 135px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 3px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.btns_wrap .common_btns button {
+  border: 0;
+  padding: 12px 15px;
+  background: var(--primary);
+  color: var(--white);
+  
   justify-content: center;
   display: flex;
   align-items: center;
@@ -293,4 +311,36 @@ ul.form-stepper li a .form-stepper-circle {
 
 .styled-table tbody tr:last-of-type {
   border-bottom: 2px solid #009879;
+}
+
+@media only screen and (min-width: 900px) {
+  .enterme {
+    display: block;
+  }
+  #lol {
+    justify-content: space-between !important
+  }
+}
+
+@media only screen and (max-width: 899px) {
+  .enterme {
+    display: none;
+  }
+  #lol {
+    justify-content: center !important
+  }
+}
+
+
+
+@media only screen and (max-width: 750px) {
+  .des{
+      display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .form-step {
+    padding: 1rem;
+}
 }

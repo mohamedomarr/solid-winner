@@ -604,7 +604,7 @@ progress {
 }
 
 .img-fluid {
-    max-width: 100%;
+    
     height: auto
 }
 
@@ -613,9 +613,20 @@ progress {
     background-color: #fff;
     border: 1px solid #dee2e6;
     border-radius: .25rem;
-    max-width: 100%;
+    max-width: 200px;
     height: auto
 }
+
+
+@media only screen and (max-width: 900px) and (min-width: 500px) {
+    .img-thumbnail {max-width: 100px;}
+    
+}
+@media only screen and (max-width: 499px)and (min-width: 200px) {
+    .img-thumbnail {max-width: 50px;}
+    
+}
+        
 
 .figure {
     display: inline-block
