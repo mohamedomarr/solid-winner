@@ -1,11 +1,11 @@
 
 :root{
-	--primary: #4361ee;
+	--primary: #0E1E5A;
 	--secondary: #bfc0c0;
 	--white: #fff;
 	--text-clr: #5b6475;
 	--header-clr: #25273d;
-	--next-btn-hover: #0e9594;
+	--next-btn-hover: #191E2D;
 	--back-btn-hover: #8b8c8c;
 }
 
@@ -33,15 +33,15 @@ h2 {
 }
 /* .button {
   padding: 0.7rem 1.5rem;
-  border: 1px solid #4361ee;
-  background-color: #4361ee;
+  border: 1px solid #0E1E5A;
+  background-color: #0E1E5A;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
 } */
 .submit-btn {
-  border: 1px solid #0e9594;
-  background-color: #0e9594;
+  border: 1px solid #191E2D;
+  background-color: #191E2D;
 }
 .mt-3 {
   margin-top: 2rem;
@@ -115,7 +115,7 @@ ul.form-stepper > li:not(:last-of-type) {
   background-color: #dee2e6;
 }
 .form-stepper-horizontal li.form-stepper-completed:after {
-  background-color: #0e9594;
+  background-color: #191E2D;
 }
 .form-stepper-horizontal li:last-child {
   flex: unset;
@@ -131,28 +131,28 @@ ul.form-stepper li a .form-stepper-circle {
   border-radius: 50%;
 }
 .form-stepper .form-stepper-active .form-stepper-circle {
-  background-color: #4361ee !important;
+  background-color: #0E1E5A !important;
   color: #fff;
 }
 .form-stepper .form-stepper-active .label {
-  color: #4361ee !important;
+  color: #0E1E5A !important;
 }
 .form-stepper .form-stepper-active .form-stepper-circle:hover {
-  background-color: #4361ee !important;
+  background-color: #0E1E5A !important;
   color: #fff !important;
 }
 .form-stepper .form-stepper-unfinished .form-stepper-circle {
   background-color: #f8f7ff;
 }
 .form-stepper .form-stepper-completed .form-stepper-circle {
-  background-color: #0e9594 !important;
+  background-color: #191E2D !important;
   color: #fff;
 }
 .form-stepper .form-stepper-completed .label {
-  color: #0e9594 !important;
+  color: #191E2D !important;
 }
 .form-stepper .form-stepper-completed .form-stepper-circle:hover {
-  background-color: #0e9594 !important;
+  background-color: #191E2D !important;
   color: #fff !important;
 }
 .form-stepper .form-stepper-active span.text-muted {

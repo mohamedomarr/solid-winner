@@ -617,17 +617,6 @@ progress {
     height: auto
 }
 
-
-@media only screen and (max-width: 900px) and (min-width: 500px) {
-    .img-thumbnail {max-width: 100px;}
-    
-}
-@media only screen and (max-width: 499px)and (min-width: 200px) {
-    .img-thumbnail {max-width: 50px;}
-    
-}
-        
-
 .figure {
     display: inline-block
 }
@@ -2168,7 +2157,7 @@ progress {
 }
 
 .table-dark {
-    --bs-table-bg: #212529;
+    --bs-table-bg: #191E2D;
     --bs-table-striped-bg: #2c3034;
     --bs-table-striped-color: #fff;
     --bs-table-active-bg: #373b3e;
