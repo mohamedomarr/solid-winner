@@ -188,6 +188,7 @@ function callingAirtable(answers) {
     if (answers["Q" + i].length >= 1) {
       formula += "OR(";
       for (j = 0; j < answers["Q" + i].length; j++) {
+        formula += `SEARCH(LOWER("${answers["Q" + i][j]}"),Q1),`
         formula += 'SEARCH("' + answers["Q" + i][j] + '",Q' + i + "),";
       }
       formula = formula.slice(0, -1);
