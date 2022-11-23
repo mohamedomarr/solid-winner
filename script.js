@@ -124,7 +124,7 @@ var q1 = new SlimSelect({
   limit: 4,
   placeholder: 'Choose a maximum of 4 options',
   onChange: () => {
-    if (q1.selected().length >= 2 ){
+    if (q1.selected().length >= 4 ){
       q1.close();
     }
   }
@@ -148,7 +148,7 @@ var q4 = new SlimSelect({
   limit: 5,
   placeholder: 'Choose a maximum of 5 options',
   onChange: () => {
-    if (q4.selected().length >= 2) {
+    if (q4.selected().length >= 5) {
       q4.close();
     }
   }
@@ -161,7 +161,7 @@ var q5 = new SlimSelect({
   limit: 5,
   placeholder: 'Choose a maximum of 5 options',
   onChange: () => {
-    if (q5.selected().length >= 3) {
+    if (q5.selected().length >= 5) {
       q5.close();
     }
   }
@@ -235,7 +235,7 @@ function callingAirtable(answers) {
                     ? `<td><img class="img-fluid img-thumbnail"  src="${records[i].get("Logo")[0].url}"></td>`
                     : "<td></td>"
                 }
-                <td>${records[i].get("Name")}</td>
+                <td class="res">${records[i].get("Name")}</td>
                 ${
                   records[i].get("Description")
                     ? `<td class="des">${records[i].get("Description")}</td>`

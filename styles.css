@@ -348,8 +348,17 @@ td {
   vertical-align: middle !important;
 }
 
-.scheme_c4i_light table td .des {
+.scheme_c4i_light table td.des {
   color: #ffffff;
+}
+
+.scheme_c4i_light table td.res {
+  color: #ffffff;
+}
+
+.scheme_c4i_light a.res {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 .elementor .img-thumbnail {
