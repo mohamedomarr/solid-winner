@@ -347,3 +347,11 @@ ul.form-stepper li a .form-stepper-circle {
 td {
   vertical-align: middle !important;
 }
+
+.scheme_c4i_light table td .des {
+  color: #ffffff;
+}
+
+.elementor .img-thumbnail {
+  max-width: 150px
+  }

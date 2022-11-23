@@ -1,12 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("welcome").classList.add("fade")
   document.getElementById("welcome-btn").addEventListener("click", () => {
     document.getElementById("welcome").style.display = "none";
+    document.getElementById("myform").classList.add("fade")
     document.getElementById("myform").style.display = "block";
   });
   document.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
       if (document.getElementById("myform").style.display == "none") {
         document.getElementById("welcome").style.display = "none";
+        document.getElementById("myform").classList.add("fade")
         document.getElementById("myform").style.display = "block";
       }else{
 
@@ -119,8 +122,8 @@ var q1 = new SlimSelect({
   select: '#q1',
   closeOnSelect: false,
   hideSelectedOption: true,
-  limit: 2,
-  placeholder: 'Choose a maximum of 2 options',
+  limit: 4,
+  placeholder: 'Choose a maximum of 4 options',
   onChange: () => {
     if (q1.selected().length >= 2 ){
       q1.close();
@@ -131,18 +134,20 @@ var q1 = new SlimSelect({
 
 new SlimSelect({
   select: '#q2',
+  placeholder: 'Choose one',
 });
 
 new SlimSelect({
   select: '#q3',
+  placeholder: 'Choose one',
 });
 
 var q4 = new SlimSelect({
   select: '#q4',
   closeOnSelect: false,
   hideSelectedOption: true,
-  limit: 2,
-  placeholder: 'Choose a maximum of 2 options',
+  limit: 5,
+  placeholder: 'Choose a maximum of 5 options',
   onChange: () => {
     if (q4.selected().length >= 2) {
       q4.close();
@@ -154,8 +159,8 @@ var q5 = new SlimSelect({
   select: '#q5',
   closeOnSelect: false,
   hideSelectedOption: true,
-  limit: 3,
-  placeholder: 'Choose a maximum of 3 options',
+  limit: 5,
+  placeholder: 'Choose a maximum of 5 options',
   onChange: () => {
     if (q5.selected().length >= 3) {
       q5.close();
