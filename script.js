@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("welcome").classList.add("fade")
   document.getElementById("welcome-btn").addEventListener("click", () => {
     document.getElementById("welcome").style.display = "none";
     document.getElementById("myform").classList.add("fade")
